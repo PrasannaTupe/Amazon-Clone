@@ -1,0 +1,332 @@
+* { /* Defining some props for all elements */
+    margin: 0px; /* setting margin 0 so no ele has extra margin and we define margin */
+    font-family: Arial;
+    border: border-box; /* whenever border added, it will be counted in height & width and not outside of it*/
+}
+
+.navbar{
+    height: 60px;
+    background-color: #0f1111; 
+    color: white;
+    display: flex; /* So that all items come in one line*/
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Logo */
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+.logo {
+    height: 50px;
+    width: 100%;
+    background-image: url(amazon-logo-cover.png);
+    background-size: cover;
+}
+
+/* Setting transparent border initially then a white after hover */
+.border {
+    border: 1.5px solid transparent;
+}
+.border:hover {
+    border: 1.5px solid white;
+}
+
+/* "Deliver to India" Box */
+.add-first{
+    font-size: 0.75rem; /* Keep font size in rem to make website responsive, i.e. when size change of screen font size also changes*/
+    color: #cccccc;
+    margin-left: 13px ; /* Add margin from left as Deliver to starts from a bit ahead of loc icon*/
+}
+.add-second{
+    font-size: 1rem; /* Font size of "India" is bigger than "Deliver to" */
+    color: white;
+    margin: 3px;
+}
+.add-icon{
+    display: flex;
+    align-items: center;
+}
+
+/* Search box */
+.nav-search{
+    display: flex;
+    width: 720px;
+    height: 40px;
+    border-radius: 4px;
+}
+.nav-selector{
+    height: 40px;
+    width: 50px;
+    background-color: #cccccc;
+    border-top-left-radius: 4px; /*putting radius to only left top and bottom side */
+    border-bottom-left-radius: 4px;
+    text-align: center;
+    border: none;
+}
+.search-icon{
+    height: 40px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem; /* To inc size of search icon */
+    color: #0f1111; /* To change color of icon */
+    background-color: #febd68;
+
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.search-bar{
+    height: 38px;
+    width: 620px;
+    font-size: 1rem;
+    border: none;
+}
+.nav-search:hover{
+    border: 2px solid orange;
+}
+
+/* Country Selector */
+.nav-country{
+    display: flex;
+}
+.flag{
+    height: 21px;
+    width: 30px;
+    background-color: white;
+    background-image: url(india-flag.webp);
+    background-size: cover;
+}
+.country-selector{
+    background-color: #0f1111;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Sign in box */
+span{
+    font-size: 0.7rem;
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Cart box */
+.nav-cart i {   /* **** Note how we address only icons i.e. 'i' in nav-cart */
+    font-size: 30px; 
+}
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* Panel */
+.panel{
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color: #232f3e;
+    display: flex;
+    align-items: center;
+}
+.panel-all{
+    margin-left: 15px;
+}
+.panel-ops p{
+    display: inline;
+    margin-left: 15px;
+}
+.panel-ops{
+    font-size: 0.88rem;
+    width: 80%;
+    margin-left: 10px;
+}
+.panel-deals{
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-left: 25px;
+}
+.panel-ops p:hover{ /* Give hover effect to <p> specially as we cannot add border to whole div of panel-ops */
+    border: 2px solid white;
+}
+
+
+/* Hero Section */
+.hero-section{
+    background-image: url(Hero.jpg);
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center; /* To bring hero msg box at center */
+    align-items: flex-end;  /* Note: We send the hero-msg box to bottom by setting flex end on cross axis */
+}
+.hero-msg {
+    background-color: white;
+    height: 40px;
+    width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.88rem;
+
+    margin-bottom: 30px; /* as hero-msg box is at bottom we want it a bit up so we give margin from bottom */
+}
+.hero-msg a{
+    color: #007185;
+}
+
+/* Main Shopping boxes */
+.shop-section {
+    display: flex;
+    justify-content: space-evenly;
+    background: #ff6a00;
+    background: linear-gradient(180deg, rgba(255, 106, 0, 1) 0%, rgba(237, 175, 142, 1) 50%, rgba(245, 245, 245, 1) 100%);
+    flex-wrap: wrap;
+}
+.box {
+    height: 350px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 0px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.box-img{
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+.box-content{
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.box-content p {
+    font-size: 0.85rem;
+    color: #007185;
+    margin-top: 15px;
+}
+.box-content p:hover {
+    font-size: 0.85rem;
+    color: #007185;
+    margin-top: 15px;
+    text-decoration: underline;
+}
+.box-4-img {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.box-img-1 {
+    height: 110px;
+    width: 150px;
+    background-size: cover;
+    margin-bottom: 37px;
+}
+.box4 p{
+    font-size: 0.85rem;
+    color: #007185;
+    margin-top: 0px;
+}
+.box4 p:hover{
+    font-size: 0.85rem;
+    color: #007185;
+    margin-top: 0px;
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    height: 600px;
+}
+/* "Back to top" */
+.footer-top {
+    height: 50px;
+    background-color: #37475a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer-top a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.footer-top:hover {
+    background-color: #556579;
+}
+/* Middle list section */
+.footer-middle {
+    height: 50%;
+    color: white;
+    background-color: #232f3e;
+    display: flex;
+    align-items: top;
+    justify-content: space-evenly;
+    padding-top: 80px;
+}
+ul a {
+    display: block;
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-top: 10px;
+}
+ul a:hover {
+    text-decoration: underline;
+}
+ul p {
+    font-weight: 700;
+}
+
+/* Footer logo */
+.footer-logo {
+    height: 70px;
+    background-color: #232f3e;
+    border-top: 0.01px solid #b3b3b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot-logo {
+    height: 80%;
+    width: 100px;
+    background-size: cover;
+}
+
+/* Footer end */
+.footer-end{
+    height: 76px;
+    background-color: #0f1111;
+    color: white;
+    padding: 30px;
+}
+.end1 {
+    display: flex;
+    justify-content: center;
+}
+.end1 p{
+    font-size: 0.85rem;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.end1 p:hover {
+    text-decoration: underline;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+}
+.socials i{
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
